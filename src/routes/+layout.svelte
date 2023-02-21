@@ -1,7 +1,7 @@
-<script type="ts">
+<script lang="ts">
 	import '$lib/styles/design-system/theme.css';
 	import '$lib/styles/app.scss';
-	import Header from '$lib/components/Header.svelte';
+	import Header from '$lib/components/layout/Header.svelte';
 </script>
 
 <Header />
@@ -9,7 +9,7 @@
 	<slot />
 </main>
 
-<style type="scss">
+<style lang="scss">
 	main {
 		background-color: var(--md-sys-color-background);
 	}
