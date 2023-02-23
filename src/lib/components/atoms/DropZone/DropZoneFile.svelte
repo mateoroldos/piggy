@@ -30,6 +30,7 @@
 	let dispatch = createEventDispatcher();
 
 	let thumbnailElement: HTMLDivElement;
+	
 	export let file: File;
 </script>
 

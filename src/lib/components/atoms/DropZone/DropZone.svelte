@@ -14,6 +14,8 @@
 	export let multiple: boolean = false;
 	export let bindValue: File[] | undefined;
 
+	let arrayOfAcceptTypes = accept.split(', ');
+
 	export let validationFunction: (files: File[] | FileList) => Promise<true> = async (
 		files: File[] | FileList
 	): Promise<true> => {
@@ -22,7 +24,7 @@
 				reject(['Too many files']);
 			} else {
 				for (let i = 0; i < files.length; i++) {
-					if (files[i].type != accept) {
+					if (!arrayOfAcceptTypes.includes(files[i].type)) {
 						reject(['Wrong file type']);
 					}
 					continue;

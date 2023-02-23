@@ -6,5 +6,7 @@ export const piggyGeneratorData: Writable<PiggyGeneratorData> = writable({
 	name: '',
 	description: '',
 	image: [],
-	goal: 0
+	goal: 0,
+	startDate: new Date(),
+	endDate: new Date()
 });

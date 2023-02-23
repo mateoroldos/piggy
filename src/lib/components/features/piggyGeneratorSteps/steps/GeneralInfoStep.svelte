@@ -16,13 +16,13 @@
 </Container>
 <Container>
   <div class="nft-wrapper">
-    <PiggyNft width="250px"/>
+    <PiggyNft width="200px"/>
   </div>
   <div class="nft-wrapper">
-    <PiggyNft  width="290px"/>
+    <PiggyNft  width="250px"/>
   </div>
   <div class="nft-wrapper">
-    <PiggyNft width="270px"/>
+    <PiggyNft width="210px"/>
   </div>
 </Container>
 
@@ -32,7 +32,7 @@
 
     &:first-child {
       top: -200px;
-      right: 300px;
+      right: 360px;
     }
 
     &:nth-child(2) {

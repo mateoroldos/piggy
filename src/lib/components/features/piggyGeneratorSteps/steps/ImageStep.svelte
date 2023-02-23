@@ -8,12 +8,12 @@
 </script>
 
 <Container>
-  <DropZone name="image" accept="image/jpg" maxAmountOfFiles={1} bind:bindValue={$piggyGeneratorData.image}/>
+  <DropZone name="image" accept="image/png, image/jpg, image/jpeg" maxAmountOfFiles={1} bind:bindValue={$piggyGeneratorData.image}/>
 	<StepButtons />
 </Container>
 <Container width="300px">
 	<h2 class="headline-small">All donators will get the following NFT</h2>
-	<PiggyNft name={$piggyGeneratorData.name} description={$piggyGeneratorData.description}/>
+	<PiggyNft name={$piggyGeneratorData.name} description={$piggyGeneratorData.description} file={$piggyGeneratorData.image[0]}/>
 </Container>
 
 <style lang="scss">

@@ -7,12 +7,12 @@
 </script>
 
 <Container>
-  <input type="date" bind:value={$piggyGeneratorData.startDate}>
+  <input type="date" bind:value={$piggyGeneratorData.endDate}>
   <StepButtons />
 </Container>
 <Container width="300px">
 	<h2 class="headline-small">Donator to put the coin that reaches the Piggy goal will get the following NFT</h2>
-	<PiggyNft name={$piggyGeneratorData.name} description={$piggyGeneratorData.description} type="golden"/>
+	<PiggyNft name={$piggyGeneratorData.name} description={$piggyGeneratorData.description} type="golden" file={$piggyGeneratorData.image[0]}/>
 </Container>
 
 <style lang="scss">
