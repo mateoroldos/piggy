@@ -1,0 +1,14 @@
+section {
+	display: grid;
+	grid-template-columns: 3fr 2fr;
+	height: 100%;
+
+	& > div.container {
+		display: grid;
+		place-content: center;
+	}
+
+	& > div.container:last-child {
+		background-color: var(--md-sys-color-primary-container);
+	}
+}

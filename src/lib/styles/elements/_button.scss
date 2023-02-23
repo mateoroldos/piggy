@@ -1,0 +1,14 @@
+button {
+	background-color: var(--md-sys-color-primary);
+	color: var(--md-sys-color-on-primary);
+	border: none;
+	border-radius: 50px;
+	padding: 8px 26px;
+	cursor: pointer;
+
+	&.transparent {
+		background-color: transparent;
+		color: var(--md-sys-color-primary);
+		border: 1px solid var(--md-sys-color-primary);
+	}
+}

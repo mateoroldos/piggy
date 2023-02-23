@@ -12,10 +12,11 @@
 
 <style types="scss">
   header {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background: var(--md-sys-color-primary-container);
+    width: 100%;
   }
 </style>

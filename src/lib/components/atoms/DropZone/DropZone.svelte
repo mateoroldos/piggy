@@ -80,7 +80,7 @@
 </script>
 
 <div
-	class="drop-zone border-primary"
+	class="drop-zone"
 	class:drop-zone-over={dragOver}
 	class:drop-zone-error={errors && errors.length > 0}
 	on:dragover={() => (dragOver = true)}
@@ -112,8 +112,8 @@
 	{#if errors.length > 0}
 		{#each errors as error}
 			<div>
-				<Icon icon="tabler:x" color="var(--clr-alert-main)" width="0.75em" />
-				<p class="error text-xsmall">{error}</p>
+				<Icon icon="tabler:x" width="0.75em" />
+				<p class="text-xsmall">{error}</p>
 			</div>
 		{/each}
 	{/if}
@@ -156,10 +156,10 @@
 		cursor: pointer;
 		transition: 0.5s;
 		overflow-y: auto;
-		border-radius: var(--radius-1);
+		border: 1px var(--md-sys-color-outline) solid;
 
 		.prompt {
-			color: var(--clr-text-off);
+			color: var(--md-sys-color-on-background);
 		}
 
 		.empty-all-wrapper {

@@ -1,3 +1,3 @@
-export { default as GeneralInfoStep } from './GeneralInfoStep.svelte';
-export { default as ImageStep } from './ImageStep.svelte';
-export { default as DateStep } from './DateStep.svelte';
+export { default as GeneralInfoStep } from './steps/GeneralInfoStep.svelte';
+export { default as ImageStep } from './steps/ImageStep.svelte';
+export { default as DateStep } from './steps/DateStep.svelte';
