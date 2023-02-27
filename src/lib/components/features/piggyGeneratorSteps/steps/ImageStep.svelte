@@ -19,5 +19,7 @@
 <style lang="scss">
 	h2 {
 		margin-bottom: 14px;
+		text-align: center;
+		color: var(--md-sys-color-on-primary-container);
 	}
 </style>
