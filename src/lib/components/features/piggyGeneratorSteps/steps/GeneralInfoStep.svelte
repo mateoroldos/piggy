@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { piggyGeneratorData } from "$lib/stores/generator/piggyGeneratorData";
 	import StepButtons from "../atoms/StepButtons.svelte";
-	import Container from "../atoms/Container.svelte";
-	import PiggyNft from "$lib/components/atoms/PiggyNft/PiggyNft.svelte";
+	import Container from '$lib/components/atoms/Container/Container.svelte';
 </script>
 
 <Container>

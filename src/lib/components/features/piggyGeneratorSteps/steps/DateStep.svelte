@@ -1,8 +1,7 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
 	import StepButtons from './../atoms/StepButtons.svelte';
 	import { piggyGeneratorData } from '$lib/stores/generator/piggyGeneratorData';
-	import Container from '../atoms/Container.svelte';
+	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import PiggyNft from '$lib/components/atoms/PiggyNft/PiggyNft.svelte';
 </script>
 
