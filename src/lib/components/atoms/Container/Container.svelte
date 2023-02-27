@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { fade } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 
   export let width = "400px"
 </script>
 
 <div class="container">
-  <div class="sub-container" in:fade={{ duration: 500 }} style={`width: ${width}`}>
+  <div class="sub-container" in:fly={{ duration: 700, y: 10 }} style={`width: ${width}`}>
     <slot/>
   </div>
 </div>
