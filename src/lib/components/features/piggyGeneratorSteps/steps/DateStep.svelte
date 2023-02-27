@@ -9,7 +9,7 @@
 <Container>
 	<label class="label-large" for="date">End date</label>
   <input type="date" bind:value={$piggyGeneratorData.endDate}>
-  <StepButtons />
+  <StepButtons nextText="Launch Piggy"/>
 </Container>
 <Container width="300px">
 	<h2 class="headline-small">Donator to put the coin that reaches the Piggy goal will get the following NFT</h2>
