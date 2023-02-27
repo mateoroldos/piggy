@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { network } from '$flow/config.js';
+import { network } from '../../../flow/config';
 import type { FlowUser } from '$lib/types/flow/user.interface';
 import type { FlowNetwork } from '$lib/types/flow/flowNetwork.type';
 import type { DisconnectedUser } from '$lib/types/flow/user.interface';

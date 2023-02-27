@@ -7,6 +7,7 @@
 </script>
 
 <Container>
+	<label class="label-large" for="date">End date</label>
   <input type="date" bind:value={$piggyGeneratorData.endDate}>
   <StepButtons />
 </Container>

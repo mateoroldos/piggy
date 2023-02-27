@@ -8,6 +8,7 @@
 </script>
 
 <Container>
+	<label class="label-large" for="image">NFT image</label>
   <DropZone name="image" accept="image/png, image/jpg, image/jpeg" maxAmountOfFiles={1} bind:bindValue={$piggyGeneratorData.image}/>
 	<StepButtons />
 </Container>
