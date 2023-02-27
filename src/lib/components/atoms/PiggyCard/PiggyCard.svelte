@@ -37,7 +37,6 @@
     color: var(--md-sys-color-on-surface-variant);
     gap: 0.8rem;
     background-color: var(--md-sys-color-surface-variant);
-    border-radius: 1rem;
     transition: 0.4s;
 
     &.move-up {
@@ -46,18 +45,22 @@
 
     &.small {
       padding: 0.8rem;
+      border-radius: 18px;
     }
 
     &.medium {
       padding: 1rem;
+      border-radius: 20px;
     }
 
     &.large {
       padding: 1.2rem;
+      border-radius: 26px;
     }
 
     &.xlarge {
       padding: 2rem;
+      border-radius: 30px;
     }
 
     &.border {
