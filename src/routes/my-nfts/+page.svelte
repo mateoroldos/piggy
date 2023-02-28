@@ -7,6 +7,7 @@
 	import type { PageData } from './+page';
 	import LoginButton from '$lib/components/atoms/Login/LoginButton.svelte';
 	import PiggyNft from '$lib/components/atoms/PiggyNft/PiggyNft.svelte';
+	import { flowUser } from '$lib/stores/flow/flowStore';
 
     export let data: PageData; 
 
@@ -57,9 +58,14 @@
     <Container width="400px">
         {#if $user}
             <div class="secondary-wrapper">
-                <p class="body-large">Currently, we are in custody of your NFTs.</p>
-                <p class="body-large">Connect your Flow wallet to have them in your wallet.</p>
-                <FlowConnect />
+                {#if !$flowUser.addr}
+                    <p class="body-large">Currently, we are in custody of your NFTs.</p>
+                    <p class="body-large">Connect your Flow wallet to have them in a self-custody wallet.</p>
+                    <FlowConnect />
+                {:else}
+                    <p class="body-large">NFTs are stored in</p>
+                    <FlowConnect />
+                {/if}
             </div>
         {/if}
     </Container>
