@@ -1,4 +1,4 @@
-import type { PageData } from './+page';
+import type { PageData } from './+layout';
 
 export const mockPiggys: PageData = {
 	piggy: {

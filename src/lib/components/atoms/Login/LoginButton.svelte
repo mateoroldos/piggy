@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getClientApp } from '$lib/firebase/client';
 	import { user } from '$lib/stores/session/userStore';
-	import { getAdditionalUserInfo, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut, type User } from 'firebase/auth';
+	import { getAdditionalUserInfo, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth';
 	import { onMount } from 'svelte';
 
   export let connectText = "Login with Google";
