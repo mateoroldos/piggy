@@ -9,7 +9,7 @@
 </script>
 
 <a 
-  href={`/piggy/${piggyData.id}`} 
+  href={`/piggy/${piggyData.ID}`} 
   class:border={hasBorder}
   class:shadow-2={onHover}
   class:move-up={onHover}

@@ -1,4 +1,4 @@
-import type { PageData } from './+page';
+import type { PageData } from './+page.server';
 
 export const mockPiggys: PageData = {
 	hot: [

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { getClientApp } from '$lib/firebase/client';
+	import { accessToken } from '$lib/stores/session/tokenStore';
 	import { user } from '$lib/stores/session/userStore';
 	import { getAdditionalUserInfo, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth';
 	import { onMount } from 'svelte';
@@ -9,8 +10,8 @@
   const loginWithGoogle = () => {
       const auth = getAuth(getClientApp())
       signInWithPopup(auth, new GoogleAuthProvider()).then(async (result) => {
-        const isFirstLogin = getAdditionalUserInfo(result).isNewUser;
-        console.log(isFirstLogin);
+        // const isFirstLogin = getAdditionalUserInfo(result).isNewUser;
+        // console.log(isFirstLogin);
       })
   };
 
@@ -22,7 +23,14 @@
   onMount(async () => {
 		const auth = getAuth(getClientApp());
 		onAuthStateChanged(auth, (newUser) => {
-      $user = newUser;      
+
+      if (newUser) {
+        newUser.getIdToken().then(function(idToken) {
+          accessToken.set(idToken);
+        });
+      }
+      
+      $user = newUser;
 		});
 	});
 </script>
