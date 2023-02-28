@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores";
+	import { user } from "$lib/stores/session/userStore";
 	import LoginButton from "../atoms/Login/LoginButton.svelte";
 </script>
 
@@ -11,10 +12,15 @@
     <nav>
       <a class="header-link" class:active={$page.url.pathname === "/"} href="/">Create</a>
       <a class="header-link" class:active={$page.url.pathname === "/trending"} href="/trending">Trending</a>
-      <a class="header-link" class:active={$page.url.pathname === "/my-piggys"} href="/my-piggys">My Piggys</a>
     </nav>
   </div>
-  <LoginButton />
+  <nav>
+    {#if $user}    
+      <a class="header-link" class:active={$page.url.pathname === "/my-nfts"} href="/my-nfts">My NFTs</a>
+      <a class="header-link" class:active={$page.url.pathname === "/my-piggys"} href="/my-piggys">My Piggys</a>
+    {/if}
+    <LoginButton />
+  </nav>
 </header>
 
 <style lang="scss">
