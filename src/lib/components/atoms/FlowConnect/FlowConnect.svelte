@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { user } from '$lib/stores/flow/flowStore';
+	import { flowUser } from '$lib/stores/flow/flowStore';
 	import Icon from '@iconify/svelte';
   import { logIn, unauthenticate } from '../../../../flow/actions';
 
@@ -7,10 +7,10 @@
 </script>
 
 <div class="button-wrapper">
-	{#if $user.addr}
+	{#if $flowUser.addr}
 		<button on:click={unauthenticate} class="transparent">
 			<span class="user">
-				{$user.addr}
+				{$flowUser.addr}
 			</span>
 			<span class="disconnect"> Disconnect </span>
 		</button>

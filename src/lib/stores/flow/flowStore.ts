@@ -53,8 +53,7 @@ const contractData = {
 	}
 };
 
-export const user = writable<FlowUser | DisconnectedUser>({ loggedIn: false });
-export const profile = writable(null);
+export const flowUser = writable<FlowUser | DisconnectedUser>({ loggedIn: false });
 
 export const addresses = {
 	NonFungibleToken: contractData.NonFungibleToken[network as FlowNetwork],

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import FlowConnect from "$lib/components/atoms/FlowConnect/FlowConnect.svelte";
-import { user } from "$lib/stores/flow/flowStore";
+	import { user } from '$lib/stores/session/userStore';
 	import { piggyGeneratorActiveStep, piggyGeneratorSteps } from "$lib/stores/generator/piggyGeneratorSteps";
+	import LoginButton from '$lib/components/atoms/Login/LoginButton.svelte';
 
   export let nextText = "Next"
   export let backText = "Back"
@@ -14,8 +14,8 @@ import { user } from "$lib/stores/flow/flowStore";
     {/if}
   </div>
   <div>
-    {#if $piggyGeneratorActiveStep === $piggyGeneratorSteps.length - 1 && !$user?.addr}
-      <FlowConnect connectText="Connect to launch" />
+    {#if $piggyGeneratorActiveStep === $piggyGeneratorSteps.length - 1 && !$user}
+      <LoginButton connectText="Login to launch" />
     {:else}
       <button on:click={piggyGeneratorActiveStep.increment}>{nextText}</button>
     {/if}

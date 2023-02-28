@@ -1,11 +1,11 @@
 import { browser } from '$app/environment';
 import * as fcl from '@onflow/fcl';
-import { user } from '../lib/stores/flow/flowStore';
+import { flowUser } from '../lib/stores/flow/flowStore';
 
 if (browser) {
 	// set Svelte $user store to currentUser,
 	// so other components can access it
-	fcl.currentUser.subscribe(user.set, []);
+	fcl.currentUser.subscribe(flowUser.set, []);
 }
 
 // Lifecycle FCL Auth functions

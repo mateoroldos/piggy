@@ -1,10 +1,6 @@
 <script lang="ts">
 	import { page } from "$app/stores";
-	import FlowConnect from "../atoms/FlowConnect/FlowConnect.svelte";
-
-console.log($page);
-
-
+	import LoginButton from "../atoms/Login/LoginButton.svelte";
 </script>
 
 <header>
@@ -18,7 +14,7 @@ console.log($page);
       <a class="header-link" class:active={$page.url.pathname === "/my-piggys"} href="/my-piggys">My Piggys</a>
     </nav>
   </div>
-  <FlowConnect />
+  <LoginButton />
 </header>
 
 <style lang="scss">

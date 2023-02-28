@@ -1,11 +1,8 @@
 <script lang="ts">
-	import { onMount } from "svelte";
-
-
   export let width = '300px';
   export let name = "Mateo";
   export let description = "buy a new camera";
-  export let file: File | undefined;
+  export let file: File | undefined = undefined;
   export let type: "common" | "golden" = "common";
   export let image = "/placeholder.jpg"
 
