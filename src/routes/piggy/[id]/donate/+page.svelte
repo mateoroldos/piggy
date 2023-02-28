@@ -90,11 +90,12 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 20px;
   }
   button {
-    padding: 1rem;
+    padding: 0.9rem;
     font-size: 1.2rem;
-    margin: 1rem 0;
+    margin: 0.6rem 0;
   }
 </style>

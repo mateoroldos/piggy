@@ -52,7 +52,7 @@
   }
 
   .label-large {
-    margin-top: 30px;
+    margin-top: 10px;
     color: var(--md-sys-color-on-primary-container);
   }
 </style>

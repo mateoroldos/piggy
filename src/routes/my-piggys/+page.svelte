@@ -9,9 +9,9 @@
 
 <section>
     <Container width="600px">
-        <h2 class="title-medium">🐷 My Piggys</h2>
         {#if $user}
-            <div class="piggys-wrapper">
+        <div class="piggys-wrapper">
+                <h2 class="title-medium">🐷 My Piggys</h2>
                 {#each data.myPiggys as piggyData}
                     <MyPiggyList {piggyData} />
                 {/each}
@@ -52,7 +52,7 @@
     .login-wrapper {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.4rem;
+        align-items: center;
+        gap: 1rem;
     }
 </style>
