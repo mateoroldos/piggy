@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
-	import FlowConnect from './../../lib/components/atoms/FlowConnect/FlowConnect.svelte';
+	import FlowConnect from '$lib/components/atoms/FlowConnect/FlowConnect.svelte';
 	import { fly } from 'svelte/transition';
 	import { user } from '$lib/stores/session/userStore';
 	import { Container, PiggyCard } from '$lib/components/atoms';
@@ -30,22 +30,14 @@
                     {/each}
                 </div>
                 <div class="navigation-wrapper">
-                    <div>
-                        {#if navigationPage > 0}
-                            <button class="transparent" on:click={() => navigationPage--}>
-                                <Icon icon="tabler:arrow-left" />
-                                Previous
-                            </button>
-                        {/if}
-                    </div>
-                    <div>
-                        {#if navigationPage < numberOfPages - 1}
-                            <button class="transparent" on:click={() => navigationPage++}>
-                                Next
-                                <Icon icon="tabler:arrow-right" />
-                            </button>
-                        {/if}
-                    </div>
+                    <button class="transparent" on:click={() => navigationPage--} disabled={navigationPage === 0} >
+                        <Icon icon="tabler:arrow-left" />
+                        Previous
+                    </button>
+                    <button class="transparent" on:click={() => navigationPage++} disabled={navigationPage >= numberOfPages - 1}>
+                        Next
+                        <Icon icon="tabler:arrow-right" />
+                    </button>
                 </div>
             </div>
         {:else}
@@ -91,6 +83,12 @@
                 display: flex;
                 align-items: center;
                 gap: 0.5rem;
+                transition: 300;
+
+                &:disabled {
+                    opacity: 0.4;
+                    cursor: not-allowed;
+                }
             }
         }
     }
