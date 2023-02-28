@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Icon from '@iconify/svelte';
 	import FlowConnect from './../../lib/components/atoms/FlowConnect/FlowConnect.svelte';
 	import { fly } from 'svelte/transition';
 	import { user } from '$lib/stores/session/userStore';
@@ -30,12 +31,18 @@
                 <div class="navigation-wrapper">
                     <div>
                         {#if navigationPage > 0}
-                            <button class="transparent" on:click={() => navigationPage--}>Previous</button>
+                            <button class="transparent" on:click={() => navigationPage--}>
+                                <Icon icon="tabler:arrow-left" />
+                                Previous
+                            </button>
                         {/if}
                     </div>
                     <div>
                         {#if navigationPage < numberOfPages - 1}
-                            <button class="transparent" on:click={() => navigationPage++}>Next</button>
+                            <button class="transparent" on:click={() => navigationPage++}>
+                                Next
+                                <Icon icon="tabler:arrow-right" />
+                            </button>
                         {/if}
                     </div>
                 </div>
@@ -70,8 +77,15 @@
 
         .navigation-wrapper {
             display: flex;
-            // justify-content: space-between;
+            justify-content: space-between;
             margin-top: 2rem;
+            gap: 1rem;
+
+            button {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+            }
         }
     }
 
