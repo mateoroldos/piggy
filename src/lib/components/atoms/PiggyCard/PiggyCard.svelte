@@ -17,14 +17,14 @@
   on:mouseenter={() => onHover = true}
   on:mouseleave={() => onHover = false}
 >
-  <img src={piggyData.image} alt="Project featured">
+  <img src="/placeholder.jpg" alt="Project featured">
   <span 
     class:body-small={size === 'small'}
     class:body-medium={size === 'medium'}
     class:body-large={size === 'large'}
     class:title-large={size === 'xlarge'}
   >
-    {`Help ${piggyData.name} to ${piggyData.description}`}
+    {`Help Jordan to buy a new camera`}
   </span>
 </a>
 

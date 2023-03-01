@@ -12,10 +12,10 @@
       const auth = getAuth(getClientApp())
       signInWithPopup(auth, new GoogleAuthProvider()).then(async (result) => {
         const isFirstLogin = getAdditionalUserInfo(result)?.isNewUser;
-        if (isFirstLogin) {
+        // if (isFirstLogin) {
           const res = await postUser()
           console.log(res);
-        }
+        // }
       })
   };
 
