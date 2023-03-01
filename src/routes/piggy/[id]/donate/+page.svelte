@@ -4,9 +4,7 @@
   import { onMount } from 'svelte'
   import { loadStripe } from '@stripe/stripe-js'
   import { env } from '$env/dynamic/public'
-  import { Elements, PaymentElement, LinkAuthenticationElement, Address } from 'svelte-stripe'
-	import Container from '$lib/components/atoms/Container/Container.svelte';
-	import PiggyNft from '$lib/components/atoms/PiggyNft/PiggyNft.svelte';
+  import { Elements, PaymentElement, LinkAuthenticationElement } from 'svelte-stripe'
 	import Icon from '@iconify/svelte';
 
   let stripe = null
@@ -42,6 +40,9 @@
       elements,
       redirect: 'if_required'
     })
+
+    console.log(elements);
+    
     // log results, for debugging
     console.log({ result })
     if (result.error) {
@@ -54,7 +55,6 @@
     }
   }
 </script>
-
 
 {#if error}
   <p>{error.message} Please try again.</p>
