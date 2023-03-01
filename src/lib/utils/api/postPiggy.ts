@@ -4,8 +4,11 @@ import { piggyGeneratorData } from '$lib/stores/generator/piggyGeneratorData';
 import { uploadToIPFS } from '../uploadToIpfs';
 import { resultCID } from '$lib/stores/generator/IPFSStore';
 import { nftImages } from '$lib/stores/generator/nftsImagesStore';
+import { launchingPiggy } from '$lib/stores/generator/generatorState';
 
 export const postPiggy = async () => {
+	launchingPiggy.set(true);
+
 	const piggyData = get(piggyGeneratorData);
 
 	const generalImageFile = new File([piggyData.image[0]], 'general', {
@@ -36,6 +39,10 @@ export const postPiggy = async () => {
 	});
 
 	const data = await res.json();
+
+	setTimeout(() => {
+		launchingPiggy.set(false);
+	}, 2000);
 
 	return data;
 };

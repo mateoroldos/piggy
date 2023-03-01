@@ -6,7 +6,7 @@
 </script>
 
 <div class="main-wrapper">
-    <h2 class="display-small">{`${data.piggy.name} needs `}<span>{`$FLOW ${data.piggy.goal.toLocaleString()}`}</span>{` to ${data.piggy.description}`}</h2>
+    <h2 class="display-small"><strong>{`${data.piggy.name}`}</strong> needs <span>{`$FLOW ${data.piggy.goal.toLocaleString()}`}</span>{` to ${data.piggy.description}`}</h2>
     <a class="button" href={`${$page.url.pathname}/donate`}>Donate</a>
 </div>
 
