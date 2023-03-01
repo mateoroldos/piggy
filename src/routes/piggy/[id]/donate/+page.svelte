@@ -7,6 +7,7 @@
   import { Elements, PaymentElement, LinkAuthenticationElement, Address } from 'svelte-stripe'
 	import Container from '$lib/components/atoms/Container/Container.svelte';
 	import PiggyNft from '$lib/components/atoms/PiggyNft/PiggyNft.svelte';
+	import Icon from '@iconify/svelte';
 
   let stripe = null
   let clientSecret = null
@@ -82,7 +83,9 @@
     </form>
   </Elements>
 {:else}
-  Loading...
+  <div class="spinner-wrapper">
+    <Icon icon="svg-spinners:gooey-balls-2" color="var(--md-sys-color-primary)" width="40px" />
+  </div>
 {/if}
 
 <style>
@@ -93,9 +96,17 @@
     padding: 2rem;
     border-radius: 20px;
   }
+
   button {
     padding: 0.9rem;
     font-size: 1.2rem;
     margin: 0.6rem 0;
+  }
+
+  .spinner-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 </style>

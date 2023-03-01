@@ -9,7 +9,7 @@
 
 <section>
   <Container width="500px">
-      <slot/>
+    <slot/>
   </Container>
   <Container width="300px">
     <h2 class="headline-small">All donators will get the following NFT.</h2>
