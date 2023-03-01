@@ -34,7 +34,8 @@ export const postPiggy = async () => {
 			description: piggyData.description,
 			image: get(resultCID),
 			start_date: piggyData.startDate.toISOString(),
-			end_date: new Date(piggyData.endDate).toISOString()
+			end_date: new Date(piggyData.endDate).toISOString(),
+			goal: piggyData.goal * 100
 		})
 	});
 

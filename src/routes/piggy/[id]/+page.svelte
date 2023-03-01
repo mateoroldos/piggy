@@ -12,7 +12,7 @@
 </script>
 
 <div class="main-wrapper">
-    <h2 class="display-small"><strong>{`${data.piggy.name}`}</strong> needs <span>{`$1,000`}</span>{` to ${data.piggy.description.toLowerCase()}`}</h2>
+    <h2 class="display-small"><strong>{`${data.piggy.name}`}</strong> needs <span>{`$${data.piggy.goal.toLocaleString()}`}</span>{` to ${data.piggy.description.toLowerCase()}`}</h2>
     <div class="donate-wrapper">
         <div class="donate-input-wrapper">
             <label for="amount">Amount </label>
