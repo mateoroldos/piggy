@@ -2,6 +2,7 @@
   import { getClientApp } from '$lib/firebase/client';
 	import { accessToken } from '$lib/stores/session/tokenStore';
 	import { user } from '$lib/stores/session/userStore';
+	import { postUser } from '$lib/utils/api/postUser';
 	import { getAdditionalUserInfo, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from 'firebase/auth';
 	import { onMount } from 'svelte';
 
@@ -10,8 +11,11 @@
   const loginWithGoogle = () => {
       const auth = getAuth(getClientApp())
       signInWithPopup(auth, new GoogleAuthProvider()).then(async (result) => {
-        // const isFirstLogin = getAdditionalUserInfo(result).isNewUser;
-        // console.log(isFirstLogin);
+        const isFirstLogin = getAdditionalUserInfo(result)?.isNewUser;
+        if (isFirstLogin) {
+          const res = await postUser()
+          console.log(res);
+        }
       })
   };
 

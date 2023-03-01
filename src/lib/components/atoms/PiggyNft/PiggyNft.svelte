@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { onMount } from "svelte";
+
   export let width = '300px';
   export let name = "Mateo";
   export let description = "buy a new camera";
@@ -16,6 +18,12 @@
       image = reader.result as string;
     }
 	};
+
+  onMount(() => {
+    if (file) {
+      displayThumbnail(file);
+    }
+  });
 
   $: file && displayThumbnail(file);
 </script>
