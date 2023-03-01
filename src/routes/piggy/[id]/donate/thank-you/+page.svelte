@@ -7,7 +7,7 @@
   <h4 class="display-small">Thank you for your donation</h4>
   {#if !$user}
     <p class="body-medium">Please login to claim your NFT</p>
-    <LoginButton connectText="Login and claim NFT" />
+    <LoginButton connectText="Login to claim NFT" />
   {:else}
      <p class="body-medium">You didn't break the Piggy, you get a normal NFT in your wallet</p>
   {/if}
